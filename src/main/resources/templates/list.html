@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Home Page</title>
+</head>
+<body>
+
+<a href="/add">Add a new message</a>
+
+    <tr th:each="message : ${messages}">
+        <td th:text="${message.id}"></td>
+        <td th:text="${message.sentBy}"></td>
+        <td th:text="${message.postDate}"></td>
+        <td th:text="${message.content}"></td>
+        <td>
+            <a th:href="@{/detail/{id}(id=${message.id})}">View</a>
+        </td>
+    </tr>
+</body>
+</html>

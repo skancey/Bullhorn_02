@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>View Message</title>
+</head>
+<body>
+<a href="/">Show All Tweets</a>
+
+<div>
+    <b>Author:</b> <span th:text="${message.sentBy}"></span> <br/>
+    <b>Date:</b> <span th:text="${message.postDate}"></span> <br/>
+    <b>Message:</b> <p th:text="${message.content}"></p>
+</div>
+
+</body>
+</html>
